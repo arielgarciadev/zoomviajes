@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zoom Viajes - Actividades</title>
+  <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/logo.png">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div id="logo-cont">
+      <a href="index.html"><img src="images/logo.png" id="logo"></a> 
+      
+    </div>
+    <div id="link-nav">
+      <a href="#" id="recomendado" style="color: #c8aa62"><span class="fas fa-star"></span></i><span class="nav-text"> Recomendado</span></a> 
+      <a href="alojamientos.html"><span class="fas fa-hotel"></span></i><span class="nav-text"> Alojamientos</span></a>
+        <a href="vuelos.html"><span class="fas fa-plane"></span></i><span class="nav-text"> Vuelos</span></a> 
+        <a href="paquetes.html"><span class="fas fa-briefcase "></span></i><span class="nav-text"> Paquetes</span></a> 
+        <a href="actividades.html"><span class="fas fa-ticket-alt"></span></i><span class="nav-text"> Actividades</span></a>
+      <a href="#"><span class="fas fa-taxi"></span></i><span class="nav-text"> Traslados</span></a>
+      <a href="#"><span class="fas fa-briefcase-medical"></span></i><span class="nav-text"> Seguros</span></a>
+
+    </div>
+    <div id="profile-cont">
+    <a href="#"><span id="profile" class="fas fa-user-alt"></span></i></a>
+    </div>
+  </nav>
+</header>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <section class="main">
+
+  <form name="quiz" action="javascript:check();" class="form">
+
+  <div class="quizsection">
+
+    <h2>Llegas a una nueva ciudad, ¿qué es lo primero que haces?</h2>
+     <div class="answer">
+        <input id="radio11" name="q1" type="radio" value="value1" id="value1" checked/>
+        <label for="radio11">Ir a descansar al hotel.</label>
+     </div>
+     <div class="answer">
+        <input  id="radio12" name="q1" type="radio" value="value2" id="value2"/>
+        <label for="radio12">Ir a algún cafe.</label>
+     </div>
+        <div class="answer">
+        <input id="radio13" name="q1" type="radio" value="value3" id="value3"/>
+        <label for="radio13">Ir directo a la playa.</label>
+     </div>
+
+
+  </div>
+
+  <div class="quizsection">
+
+    <h2 id="pregunta-2">¿Cuál es tu horario favorito para descubrir un nuevo lugar?</h2>
+
+     <div class="answer">
+        <input id="radio21" name="q2" type="radio" value="value1" id="value1" checked/>
+        <label for="radio21">Mañana.</label>
+     </div>
+     <div class="answer">
+        <input id="radio22" name="q2" type="radio" value="value2" id="value2"/>
+        <label for="radio22">Tarde.</label>
+     </div>
+        <div class="answer">
+        <input id="radio23" name="q2" type="radio" value="value3" id="value3"/>
+        <label for="radio23">Noche.</label>
+     </div>
+
+
+
+  </div>
+
+  <div class="quizsection">
+
+    <h2>¿Cuál es tu actividad favorita en los viajes?</h2>
+
+     <div class="answer">
+        <input id="radio31" name="q3" type="radio" value="value1" id="value1" checked/>
+        <label for="radio31">Visitar museos.</label>
+     </div>
+     <div class="answer">
+        <input id="radio32" name="q3" type="radio" value="value2" id="value2"/>
+        <label for="radio32">Recorrer el lugar caminando.</label>
+     </div>
+        <div class="answer">
+        <input id="radio33" name="q3" type="radio" value="value3" id="value3"/>
+        <label for="radio33">Ir a bares.</label>
+     </div>
+
+
+  </div>
+
+  <div class="quizsection">
+
+     <h2>¿Con quién haces el viaje?</h2>
+
+     <div class="answer">
+        <input id="radio41" name="q4" type="radio" value="value1" id="value1" checked/>
+        <label for="radio41">En familia.</label>
+     </div>
+     <div class="answer">
+        <input id="radio42" name="q4" type="radio" value="value2" id="value2"/>
+        <label for="radio42">En pareja.</label>
+     </div>
+        <div class="answer">
+        <input id="radio43" name="q4" type="radio" value="value3" id="value3"/>
+        <label for="radio43">Con amigues.</label>
+     </div>
+
+
+  </div>
+
+  <div class="quizsection">
+
+     <h2>PREGUNTA #5</h2>
+
+     <div class="answer">
+        <input id="radio51" name="q5" type="radio" value="value1" id="value1" checked/>
+        <label for="radio51">Valor 1</label>
+     </div>
+     <div class="answer">
+        <input id="radio52" name="q5" type="radio" value="value2" id="value2"/>
+        <label for="radio52">Valor 2</label>
+     </div>
+        <div class="answer">
+        <input id="radio53" name="q5" type="radio" value="value3" id="value3"/>
+        <label for="radio53">Valor 3</label>
+     </div>
+  </div>
+
+  <button value="Submit" class="button">ENVIAR</button>
+
+
+  </form>
+
+    </section>
+  </div>
+
+</div>
+
+<main>
+  <section id="caja-buscador">
+    <input id="tab1" type="radio" name="tabs">
+    <label for="tab1"><span class="fas fa-hotel"></span></i><span class="tab-text"> Alojamientos</span></label>
+
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2"><span class="fas fa-plane"></span></i><span class="tab-text"> Vuelos</span></label>
+
+    <input id="tab3" type="radio" name="tabs">
+    <label for="tab3"><span class="fas fa-briefcase "></span></i><span class="tab-text"> Paquetes</span></label>
+
+    <input id="tab4" type="radio" name="tabs" checked>
+    <label for="tab4"><span class="fas fa-ticket-alt"></span></i><span class="tab-text"> Actividades</span></label>
+
+    <section id="content1">
+      <form action="/action_page.php" id="Cajadeviajes">
+        <div id="cont-origen-destino">
+        <label for="destino">Destino: </label><input type="text" name="destino" placeholder="Ingrese una ciudad" id="destino">
+        </div>
+        <div>
+        <label for="salida">Fecha de salida: </label><input type="date" name="salida" value="2018-12-12">
+        <label for="vuelta">Fecha de regreso: </label><input type="date" name="vuelta"value="2018-12-12">
+        </div>
+        <div>
+        <label for="Habitaciones">Habitaciones</label><input type="number" name="Habitaciones" min="1" max="3" value="1" style="width: 3em">
+        <label for="personas">Personas</label><input type="number" name="personas" min="1" max="6" value="2" style="width: 3em">
+        </div>
+         <button class="button" id="boton-buscador" type="submit"><span>Buscar </span></button>
+</form>
+
+    </section>
+
+    <section id="content2">
+     <form action="/action_page.php" id="Cajadeviajes">
+        <div>
+          <label for="idayvuelta">Ida y vuelta: </label><input type="radio" name="idaovuelta" value="idayvuelta" id="idayvuelta">
+          <label for="ida">Ida: </label><input type="radio" name="idaovuelta" value="ida" id="ida">
+        </div>
+        <div id="cont-origen-destino">
+        <label for="origen">Origen: </label><input type="text" name="origen" value="Buenos Aires" id="origen">
+        <label for="destino">Destino: </label><input type="text" name="destino" placeholder="Ingrese una ciudad" id="destino">
+        </div>
+        <div>
+        <label for="salida">Fecha de salida: </label><input type="date" name="salida" value="2018-12-12">
+        <label for="vuelta">Fecha de regreso: </label><input type="date" name="vuelta"value="2018-12-12">
+        </div>
+        <div>
+        <label for="personas">Personas</label><input type="number" name="personas" min="1" max="6" value="1" style="width: 3em">
+        </div>
+         <button class="button" id="boton-buscador" type="submit"><span>Buscar </span></button>
+      </form>
+    </section>
+
+    <section id="content3">
+     <form action="/action_page.php" id="Cajadeviajes">
+        <div>
+          <label for="idayvuelta">Ida y vuelta: </label><input type="radio" name="idaovuelta" value="idayvuelta" id="idayvuelta">
+          <label for="ida">Ida: </label><input type="radio" name="idaovuelta" value="ida" id="ida">
+        </div>
+        <div id="cont-origen-destino">
+        <label for="origen">Origen: </label><input type="text" name="origen" value="Buenos Aires" id="origen">
+        <label for="destino">Destino: </label><input type="text" name="destino" placeholder="Ingrese una ciudad" id="destino">
+        </div>
+        <div>
+        <label for="salida">Fecha de salida: </label><input type="date" name="salida" value="2018-12-12">
+        <label for="vuelta">Fecha de regreso: </label><input type="date" name="vuelta"value="2018-12-12">
+        </div>
+        <div>
+        <label for="personas">Habitaciones</label><input type="number" name="Habitaciones" min="1" max="6" value="1" style="width: 3em">
+        <label for="personas">Personas</label><input type="number" name="personas" min="1" max="6" value="2" style="width: 3em">
+        </div>
+         <button class="button" id="boton-buscador" type="submit"><span>Buscar </span></button>
+      </form>
+    </section>
+
+    <section id="content4">
+     <form action="/action_page.php" id="Cajadeviajes">
+        <div style="margin: 20px">
+          <label for="destino">Qué hacer en </label><input type="text" name="destino" placeholder="Ingrese una ciudad" id="destino" ">
+        </div>
+
+         <button class="button" id="boton-buscador" type="submit"><span>Buscar </span></button>
+      </form>      
+    </section>
+  </section>
+</main>
+
+
+<section>
+  <h3>Destinos Populares</h3>
+  <div id="publicaciones">
+  <a href="#">
+  <div class="destinos-populares">
+    <img src="images/roma.jpg">
+    <p class="destinos-populares-texto">Roma</p>
+  </div>
+  </a>
+  <a href="#">
+  <div class="destinos-populares">
+    <img src="images/londres.jpg">
+    <p class="destinos-populares-texto">Londres</p>
+  </div>
+  </a>
+  <a href="#">
+  <div class="destinos-populares">
+    <img src="images/newyork.jpg">
+    <p class="destinos-populares-texto">Nueva York</p>
+  </div>
+  </a>
+  <a href="#">
+  <div class="destinos-populares">
+    <img src="images/dubai.jpg">
+    <p class="destinos-populares-texto">Dubai</p>
+  </div>
+  </a>
+  <a href="#">
+  <div class="destinos-populares">
+    <img src="images/tokyo.jpg">
+    <p class="destinos-populares-texto">Tokyo</p>
+  </div>
+  </a>
+  <a href="#">
+  <div class="destinos-populares">
+    <img src="images/paris.jpg">
+    <p class="destinos-populares-texto">Paris</p>
+  </div>
+  </a>
+  <a href="#">
+    <div class="destinos-populares">
+    <img src="images/ushuaia.jpg">
+    <p class="destinos-populares-texto">Ushuaia</p>
+  </div>
+  </a>
+  <a href="#">
+  <div class="destinos-populares">
+    <img src="images/amsterdam.jpg">
+    <p class="destinos-populares-texto">Amsterdam</p>
+  </div>
+  </a>
+  <a href="#">
+  <div class="destinos-populares">
+    <img src="images/bariloche.jpg">
+    <p class="destinos-populares-texto">Bariloche</p>
+  </div>
+  </a>
+  </div>
+</section>
+
+<footer class="footer-distributed">
+
+  <div class="footer-right">
+
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+
+  </div>
+
+  <div class="footer-left">
+
+    <p class="footer-links">
+      <a class="link-1" href="#">Inicio</a>
+
+      <a href="#">Blog</a>
+
+      <a href="#">Ayuda</a>
+
+      <a href="#">Sobre nosotros</a>
+
+      <a href="#">Preguntas frecuentes</a>
+
+      <a href="#">Contacto</a>
+    </p>
+
+    <p>Ariel Garcia &copy; 2018</p>
+  </div>
+
+</footer>
+  <script type="text/javascript" src="js/javascript.js"></script>
+</body>
+</html>
